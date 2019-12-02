@@ -1,0 +1,39 @@
+*, *::before, *::after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+ }
+body, ul,li, p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    
+}
+a { text-decoration: none; 
+    color: #ffffff;}
+header{
+    background-color: #1d1e20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.topo{}
+.menu{
+    display: flex;
+/*    justify-content: space-between;*/
+}
+.menu li {
+    margin: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+/*    background-color: brown;*/
+}
+/*    FLEXBOX 1    */
+img { 
+    max-width: 100%;
+    display: block;}
