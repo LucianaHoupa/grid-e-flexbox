@@ -1,0 +1,90 @@
+body, ul, li p {
+    margin: 0px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+body{
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+    .topo{
+        flex-direction: column;
+    }
+    .menu li {
+        margin-left: 30px;
+    }
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.topo {
+    background-color: #1d1e20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    margin-left: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    /*background: tomato;*/
+}
+/*CSS GRID 3*/
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+}
+.grid3-item:first-child {
+    grid-row: 1 / 3; /* ele vai ocupar 3 linhas */
+}
+.grid3-item {
+    display: grid;
+}
+.grid3-item img {
+    grid-column: 1; /* posicionando minha imagem na primeira coluna */
+    grid-row: 1/3; /*ele está ocupando da linha 1 à 3*/
+    align-self: end;  /*para a legenda alinhar ao final */
+}
+.grid3-item p {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;    
+    color: white;
+    grid-column: 1;/* está ocupando minha primeira linha */
+    grid-row: 2; /* para indicar que ele está ocupando a segunda linha */
+    margin-bottom: inherit; /* zerou a borda que estava dando no bottom */
+    align-self: end; /* para a legenda alinhar ao final */
+}
+
+
+
+
+
+
+
+
+
+
+
+

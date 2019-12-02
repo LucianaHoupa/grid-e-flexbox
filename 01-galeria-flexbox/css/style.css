@@ -48,11 +48,11 @@ img {
 .flexbox {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1200px; /* limitando o tamanho que minhas divs vão ocupar na tela */
     margin: 0 auto;
 }
 .flexbox > div {
-    flex: 1 1 200px;
+    flex: 1 1 200px;/* flex: 0 1 200px; com flex 0 todos ficam com tamanhos iguais. Se fosse flex: 1 1 200px; com o valor 1, eles se adaptariam expandindo ou ficando menor de acordo com o tamanho da tela. E indicar dentro da classe pai que ele pode efetuar a quebra de linha (flex-wrap: wrap;). Respeitando sempre o limite de tamanho que passei pra ele */
     margin: 0 10px;
 }
 /*CSS GRID 1*/

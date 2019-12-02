@@ -1,0 +1,105 @@
+body, ul, li p {
+    margin: 0px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+body{
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+    .topo{
+        flex-direction: column;
+    }
+    .menu li {
+        margin-left: 30px;
+    }
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.topo {
+    background-color: #1d1e20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    margin-left: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    /*background: tomato;*/
+}
+/*CSS GRID 1*/
+.grid1 {
+    display: grid;
+    /* Declarar quantas colunas quero que esse grid tenha: */
+    /*grid-template-columns: 1fr 1fr 1fr;*/ /*Posso declarar dessa forma, ou da maneira abaixo: */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+    grid-gap: 20px;/* espaçamento entre os elementos */
+    padding: 10px;
+}
+.grid1 > div:nth-child(n + 4) {/* Declarando como ele vai se comportar a partir do quinto item */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Para separar minha imagem e meu paragrafo dentro de uma coluna e definir qual a fração de tamanho que ele vai ocupar. Eu deixei tamanhos iguais um em relação ao outro, definindo isso a partir do meu quarto elemento que foi declarado ali quando passei minha classe */
+    grid-gap: 10px;/* espaçamento entre imagem e paragrafo */
+    align-items: center; /* alinhando ao centro (<p> e img)*/
+}
+
+.grid1 > div.anuncio{/* declarar dessa forma para que ele entenda como deve se comportar dentro do meu grid */
+    grid-column: 1; /* qual linha quero que meu anuncio ocupe */
+    grid-row: 2 / 5;
+    border-top: 30px solid white;
+    display: block;/* ele volta as configurações originais */
+}
+@media (max-width: 600px){
+    .grid1{
+    /*grid-template-columns: 1fr 1fr; Posso declarar assim, ou da maneira abaixo: */
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .grid1 > div:nth-child(n + 4) {
+        display: block; /* para desabilitar as configurações anteriores e manter as confiurações iniciais */
+}
+    .grid1 > div.anuncio{
+        border-top: 0px solid white;
+        /* Resetando para que meu anuncio não ocupe 3 linhas no mobile e assim, quebre meu layout */
+        /* Para eles se posicionarem automaticamente: */
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
